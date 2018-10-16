@@ -50,6 +50,7 @@ def travelingSalesman_Optimized(cities, start=None):
     must_visit.remove(start)
     while must_visit:
         nearest=min(must_visit,key=lambda x: distance(path[-1], x))
+        ## lambda is a class without body, havin' fun, doin'stuff, temporarily there
         path.append(nearest)
         ##waypoints.append(path)
         must_visit.remove(nearest)

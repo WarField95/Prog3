@@ -1,0 +1,29 @@
+
+
+import random
+import math
+
+def rollDice():
+    roll=float(random.randint(0,1000)/1000)
+    return roll
+
+def RandomPoint():
+    return([rollDice(),rollDice()])
+
+def Calc(ortsvector):
+    return math.sqrt(2*(ortsvector[0]*ortsvector[1]))
+
+def MonteCarlo(innen, alle, runs):
+    runs=runs+1
+    randomP=RandomPoint()
+    if Calc(randomP)<=1:
+        innen=innen+1
+    alle=alle+1
+    while runs<900:
+        return MonteCarlo(innen, alle, runs)
+    else:
+        return (innen/alle)*4
+
+print (MonteCarlo(0,0,0))
+
+

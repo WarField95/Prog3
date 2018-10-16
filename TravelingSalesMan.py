@@ -56,7 +56,7 @@ def travelingSalesman_Optimized(cities, start=None):
     return path, ##waypoints
 
 
-def main(waypoints):
+def main():    ##waypoints for array to save removed cities/paths
     ##doctest.testmod()
     cities=[[0,0],[1,5.7],[2,3],[3,9],[0.5,14],[7,2]]
 

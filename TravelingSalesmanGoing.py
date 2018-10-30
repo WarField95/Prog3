@@ -75,7 +75,7 @@ def permutations(cities):
 
 def travellingSalesman(cities, start=None):
   
-  """traveling salesman"""
+  """traveling salesman shortest roundabout"""
     # if start is None:
     #     start = cities[0]
     distance_liste = []

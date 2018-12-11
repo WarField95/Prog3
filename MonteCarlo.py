@@ -1,4 +1,7 @@
 import random, math, time
+import pprofile
+
+profiler = pprofile.Profile()
 
 class MonteCarlo():
     def __init__(self, mode = 0, runAmount = 900):
@@ -102,12 +105,16 @@ class MonteCarlo():
                 minTime = self.timeRand[i]
 
         return minTime
+with profiler:
+    monteCarlo0 = MonteCarlo(0, 900)
+    monteCarlo1 = MonteCarlo(1, 900)
 
-monteCarlo0 = MonteCarlo(0, 900)
-monteCarlo1 = MonteCarlo(1, 900)
 
-pi0 = monteCarlo0.getPi_MonteCarlo()
-pi1 = monteCarlo1.getPi_MonteCarlo()
+
+    pi0 = monteCarlo0.getPi_MonteCarlo()
+    pi1 = monteCarlo1.getPi_MonteCarlo()
+
+profiler.print_stats()
 
 print("Pi nach Monte Carlo:")
 print("\t" + "Normal:" + "\t\t" + str(pi0))

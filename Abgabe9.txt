@@ -1,0 +1,66 @@
+Programmieren 3
+
+Abgabe 9
+
+
+A9.1.1
+
+	- Jonas
+
+
+A9.1.2
+
+	- async: call work, do other work while the first one is running as long as they don´t depend on each other
+
+	- await: actually calls the funktion instead of just returning an async-object
+
+	https://stackabuse.com/python-async-await-tutorial/
+
+
+A9.1.3
+
+	- possibility to block in critical situations to ensure no data corruption occures
+	- you can return async objects or call dem directly
+	- implementing event loops
+	- better control when and how to run different functions and so on
+
+
+A9.1.4
+
+	- GPU hardware is specialised to graphical and, sometimes, for physics calculations ... they use specially structured chips for these kinds of work 
+
+
+A9.1.5
+
+	- nach dem timen und betrachten des ressourcenverbrauches vermutlich eine verschnellerung des faktors 3-5, da z.B. ein neuer distanzvektor berechnet werden kann
+	  während die gesamtdistanz des vorherigen durchlaufes noch berechnet wird oder teile der permutationen können schon berechnet werden während noch kalkulationen laufen
+
+
+A9.2.3
+
+	- nein, es kommt drauf an welcher prozess zuerst fertig ist
+
+
+A9.2.4 
+
+	- siehe A9.1.5
+
+
+A9.3.2
+
+	- sehr viel schneller
+
+
+A9.3.3
+
+	- nicht jeder rechner hat mehr als 2 kerne, wenn schon sollte man die aufteilung auf kerne dynamisch programmieren in bezug auf das vorliegende system
+	- es ist nicht bei jedem programm immer sinnvoll es auf möglichst viele kerne aufzuteilen weil die aufteilung und aufstückelung manchmal simpel unnötig sein kann
+	  oder mehr ressourcen frisst als es gewinn bringt
+
+
+A9.3.4
+
+	- das packet queue bringt einige lock-mechanismen und implementierungen mit, wodurch sich bestimmen lässt wie die queue abgearbeitet wird
+	- blockiert das weiterlaufen des programmes bis alle objekte in der queue abgearbeitet wurden
+
+

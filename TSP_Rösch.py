@@ -75,12 +75,12 @@ def plot_closed_path(path):
 start_pos, nr_of_cities = 0, 9
 end_pos = start_pos + nr_of_cities
 
-with profiler:
-    result = shortest_closed_path((staedte_positionen[start_pos], ),
+# with profiler:
+result = shortest_closed_path((staedte_positionen[start_pos], ),
                             staedte_positionen[start_pos+1:end_pos])
 
 
-profiler.print_stats()
+# profiler.print_stats()
 
 plot_closed_path(result[1])
 print('Länge:', result[0])
